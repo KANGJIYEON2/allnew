@@ -1,0 +1,115 @@
+body {
+    background-image: url('night.jpg');
+    background-size: cover;
+
+}
+
+h3 {
+    color: rgb(249, 249, 242);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 2px blueviolet, 0 0 25px black, 0 0 9px darkmagenta;
+}
+
+hr {
+    border: 3px solid rgb(244, 244, 250);
+    line
+}
+
+input {
+    color: rgb(68, 70, 32);
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+a {
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #b382afdd;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+
+p {
+    font-size: 18px;
+    color: #b382afdd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="text"] {
+    background-color: aliceblue;
+    border-color: aliceblue;
+
+}
+
+input[type="password"] {
+    background-color: aliceblue;
+    border-color: aliceblue;
+}
+
+input[type="button"] {
+    color: rgb(92, 33, 164);
+    border-radius: 50px 50px 50px 50px;
+    border-color: rgb(156, 114, 182);
+    box-shadow: 1px 1px rgb(156, 114, 182);
+}
+
+input[type="submit"] {
+    color: rgb(92, 33, 164);
+    border-radius: 50px 50px 50px 50px;
+    border-color: rgb(156, 114, 182);
+    box-shadow: 1px 1px rgb(156, 114, 182);
+}
+
+input[type="reset"] {
+    color: rgb(92, 33, 164);
+    border-radius: 50px 50px 50px 50px;
+    border-color: rgb(156, 114, 182);
+    box-shadow: 1px 1px rgb(156, 114, 182);
+}
+
+button[type="submit"] {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(92, 33, 164);
+    border-radius: 50px 50px 50px 50px;
+    border-color: rgb(156, 114, 182);
+    box-shadow: 1px 1px rgb(156, 114, 182);
+    padding: 5px;
+}
+
+
+div.box {
+    background-color: rgb(244, 233, 248);
+    border-style: solid;
+    border-radius: 50px 50px 50px 50px;
+    width: 350px;
+    height: 180px;
+    margin: : auto;
+    border-width: 2px;
+    padding: 80px;
+    border-color: rgb(156, 114, 182);
+    box-shadow: 5px 5px rgb(156, 114, 182);
+}
+
+
+div.box-inner {
+
+    border-style: none;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+
+div.blank {
+    padding-left: 180px;
+
+
+}
