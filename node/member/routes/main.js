@@ -33,7 +33,7 @@ app.post('/login', (req, res) => {
         res.redirect('member.html')
     } else {
         console.log(id + " => User Logined")
-        res.redirect('main.html')
+        res.redirect('login.html')
 
     }
 })
@@ -41,9 +41,37 @@ app.post('/login', (req, res) => {
 // register
 app.post('/register', (req, res) => {
     const { id, pw } = req.body;
-    const result = connection.query("insert into user values (?, ?)", [id, pw]);
-    console.log(result);
-    res.redirect('/');
+    if (id == "") {
+        res.redirect('register.html')
+    } else {
+        let result = connection.query("select * from user where userid=?", [id]);
+        if (result.length > 0) {
+            res.writeHead(200);
+            var template = `
+            <!doctype html>
+            <html>
+            <head>
+                <title>Error</title>
+                <meta charset="utf-8">
+            </head>
+            <body>
+                <div>
+                <h3 style="margin-left: 30px">Register Faild</h3>
+                <h4 style="margin-left: 30px"> 이미 존재하는 아이디입니다.</h4>
+                <a href="register.html" style="margin-left: 30px">다시 시도하기</a>
+                </div>
+            </body>
+            <html>
+            `;
+            res.end(template);
+
+        }
+        result = connection.query("insert into user values (?, ?)",
+            [id, pw]);
+        console.log(result);
+        res.redirect('/');
+
+    }
 })
 
 // request O, query X

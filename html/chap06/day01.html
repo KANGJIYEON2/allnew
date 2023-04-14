@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>달력 출력</title>
+</head>
+
+<body>
+  <label>월과 년도를 입력하세요 (YYYY-MM):</label>
+  <input type="text" id="dateInput">
+  <button type="button" onclick="printCalendar()">달력 출력</button>
+
+  <pre id="calendar"></pre>
+
+  <script>
+    function printCalendar() {
+      const dateInput = document.getElementById("dateInput").value;
+      const [year, month] = dateInput.split("-");
+
+      if (isNaN(year) || year < 1 || year > 9999 || isNaN(month) || month < 1 || month > 12) {
+        alert("잘못된 입력입니다.");
+        return;
+      }
+
+      const daysInMonth = new Date(year, month, 0).getDate();
+      const firstDayOfMonth = new Date(year, month - 1, 1).getDay();
+
+      let calendar = "Sun Mon Tue Wed Thu Fri Sat\n";
+      let day = 1;
+      let i = 0;
+      while (i < 6) {
+        let row = "";
+        let j = 0;
+        while (j < 7) {
+          if (i === 0 && j < firstDayOfMonth) {
+            row += "    ";
+          } else if (day > daysInMonth) {
+            break;
+          } else {
+            row += day.toString().padStart(4, " ");
+            day++;
+          }
+          j++;
+        }
+        calendar += row + "\n";
+        i++;
+        if (day > daysInMonth) {
+          break;
+        }
+      }
+      document.getElementById("calendar").textContent = calendar;
+    }
+  </script>
+</body>
+
+</html>
