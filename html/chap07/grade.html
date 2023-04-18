@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>프로토타입으로 Car 객체 만들기</title>
+    <script>
+        function Car(name, grade, math, english) {
+            this.name = name;
+            this.grade = grade;
+            this.math = math;
+            this.english = english;
+
+
+            this.info = function () {
+                document.write(`
+                name : ${this.name}<br>
+                grade : ${this.grade}<br>
+                MATH : ${this.math} <br>
+                ENGLISH : ${this.english}`);
+            };
+
+            this.avg = function () {
+                this.total = (math + english) / 2;
+                document.write(
+                    `<br><br>${this.name} 님의 평균점수는 ${this.total} 점 입니다. <br>`
+                );
+
+                if (this.total > 50)
+                    document.write(
+                        ` 열심히 공부하셨군요. <br><hr />`
+                    );
+
+                else
+                    document.write(
+                        `재시험 당첨입니다.<br><hr />`
+                    );
+            };
+
+        };
+
+    </script>
+
+</head>
+
+<body>
+    <h3> 프로토타입으로 Car 객체 만들기</h3>
+    <hr />
+    <script>
+        let kim = new Car("KIM", "First grade", 90, 50);
+        kim.info();
+        kim.avg();
+        let Han = new Car("HAN", "Second grade", 40, 30);
+        Han.info();
+        Han.avg();
+    </script>
+</body>
+
+</html>
