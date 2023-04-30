@@ -20,7 +20,10 @@ scala/**/target
 maven/target
 
 ## nodejs
-node/**/node_modules
+node_modules/
+node/**/package-lock.json
+node/config/pool.js
+
 
 ## python
 python/**/.venv

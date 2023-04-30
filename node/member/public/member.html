@@ -22,17 +22,20 @@
         if (!window.sessionStorage) {
             alert("세션 스토리지를 지원하지 않습니다.");
             return;
+        } else if (!id) {
+            alert("잘못된 접근입니다.");
+            sessionStore.removeItem("");
+            location.href = "member.html";
+        } else {
+            sessionStorage.setItem(id, now);
+            alert(`사용자 ${id} 님이 로그인 하셨습니다.`);
         }
-        sessionStorage.setItem(id, now);
-        alert(`사용자 ${id} 님이 로그인 하셨습니다.`);
 
 
     }
 
 
-
 </script>
-
 
 
 

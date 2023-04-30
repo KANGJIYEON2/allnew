@@ -1,0 +1,100 @@
+/* Navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#Logo {
+  cursor: pointer;
+  width: 18rem;
+  height: 8rem;
+
+}
+
+#searchBar {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin: 0 10px;
+  width: 400px;
+  transition: all .2s ease-in-out;
+}
+
+#searchBar:focus {
+  outline: none;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+#loginButton {
+  padding: 8px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  transition: all .2s ease-in-out;
+}
+
+#loginButton:hover {
+  background-color: #719ECE;
+  color: #fff;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.search-container h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin-right: 20px;
+  width: 500px;
+  transition: all .2s ease-in-out;
+}
+
+.search-container input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.search-container button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #719ECE;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+}

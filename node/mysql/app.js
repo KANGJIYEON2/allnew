@@ -10,28 +10,39 @@ var connection = mysql.createConnection({
     database: process.env.database
 })
 
-var app = express();
+let reult = connection.query('select * from st_info');
+console.log(result);
 
-connection.connect(function (err) {
-    if (!err) {
-        console.log("Database is connected....\n\n");
-    } else {
-        console.log("Error connecting Database....\n\n");
-    }
-});
+//make insert data
+let data = {
+    st_id: "202399",
+    name: "Moon",
+    dept: "Computer"
+}
 
-app.get('/', function (req, res) {
-    connection.query('select * from st_info', function (err, rows, fields) {
-        connection.end();
-        if (!err) {
-            res.send(rows);
-            console.log('The solution is : ', rows);
-        } else {
-            console.log('Error while performing Query ');
-        }
-    })
-})
+// inserted data's id
+let insertId = data.st_id;
 
-app.listen(8000, function () {
-    console.log('8000 Port : Server Started...');
-})
+// insert query
+result = connection.query("insert into st_info values (? , ?, ?)", [insertId, data.name, data.dept]);
+console.log("data is Inserted~!!");
+
+// select query of inserted data
+result = connection.query("select * from st_info where st_id = ?", [insertId]);
+console.log(reusult);
+
+// update query
+results = connection.query("update st_info set dept = ? where st_id = ? ", ["Game", insertId]);
+console.log("data is Updated~!!");
+
+// select query of inserted data
+result = connection.query("select * from st_info where st_id = ?", [insertId]);
+console.log(result);
+
+// delete row
+result = connection.query("delete from st_info where st_id = ?", [insertId]);
+console.log(result);
+
+// select query all data
+result = connection.query("select * from st_info");
+console.log(result);

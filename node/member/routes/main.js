@@ -30,10 +30,10 @@ app.post('/login', (req, res) => {
     }
     if (id == 'admin' || id == 'root') {
         console.log(id + " => Administrator Logined")
-        res.redirect('member.html')
+        res.redirect('member.html?id=' + id);
     } else {
         console.log(id + " => User Logined")
-        res.redirect('login.html')
+        res.redirect('user.html?id=' + id)
 
     }
 })
@@ -130,3 +130,4 @@ app.post('/delete', (req, res) => {
 })
 
 module.exports = app;
+

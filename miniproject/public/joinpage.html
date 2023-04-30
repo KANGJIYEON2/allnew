@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<div id="header" class="hearder_img" role="banner">
+    <h2>회원가입 페이지</h2>
+    <div>
+        <hr /><br>
+        <form action="/insert" method="POST" id="form">
+            <label for="US_ID">아이디:</label>
+            <input type="text" id="US_ID" name="US_ID" size="15"><br><br>
+            <label for="username">이름:</label>
+            <input type="text" id="US_NAME" name="US_NAME" size="15"><br><br>
+            <label for="US_Birth">생년월일 앞자리:</label>
+            <input type="text" id="US_Birth" name="US_Birth"><br><br>
+            <label for="US_addr">주소:</label>
+            <input type="text" id="US_addr" name="US_addr" size="30"><br><br>
+            <label for="phone2">핸드폰:</label>
+            <input type="text" id="US_M_NUM" name="US_M_NUM" size="20"><br><br>
+            <label for="phone1">집전화번호:</label>
+            <input type="tel" id="US_H_NUM" name="US_H_NUM" size="20"><br><br>
+            <label for="US_Join">가입일자:</label>
+            <input type="text" id="US_Join" name="US_Join"><br><br>
+            <label for="US_PW">비밀번호:</label>
+            <input type="password" id="US_PW" name="US_PW"><br><br>
+            <input type="submit" value="가입하기">
+        </form>
+        <style>
+            h2 {
+                font-size: 30px;
+
+            }
+
+            form {
+                max-width: 1500px;
+                margin: auto;
+                padding: 20px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px;
+
+            }
+
+            label {
+                display: inline-block;
+                width: 200px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="tel"],
+            input[type="password"] {
+                padding: 5px;
+                font-size: 16px;
+
+                border: 2px solid #ccc;
+                width: 300px;
+            }
+
+            input[type="submit"] {
+                background-color: grey;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 20px;
+            }
+        </style>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ninebrary</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /*top 부분*/
+
+        #topMenu {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            padding: 3px 10px 3px 10px;
+            text-align: center;
+        }
+
+
+        #topMenu ul li {
+            list-style: none;
+            color: white;
+            float: left;
+            line-height: 400px;
+            vertical-align: middle;
+            text-align: center;
+
+        }
+
+        #topMenu .topMenuclass {
+            text-decoration: none;
+            color: #666666;
+            font: .9em "돋움", Dotum, "굴림", Gulim, AppleGothic, Sans-serif;
+            padding: 0 5px 0 5px;
+            display: table
+        }
+
+
+
+        body {
+            font-family: '맑은고딕';
+        }
+
+        /* 중간 nav 부분 */
+
+        nav#midMenu {
+            background-color: #333;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav#midMenu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav#midMenu li {
+            float: left;
+        }
+
+        nav#midMenu li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+
+        nav#midMenu li a:hover {
+            background-color: #111;
+        }
+
+        div#search {
+            height: 40px;
+            width: 400px;
+            outline: none;
+            float: left;
+
+        }
+
+        input {
+            font-size: 15px;
+            width: 500px;
+            padding: 15px;
+            height: 20px;
+            border-color: grey;
+            float: left;
+        }
+
+
+
+        button {
+            width: 90px;
+            height: 100%;
+            padding: 15px;
+            float: right;
+            color: black;
+            border-radius: 5px;
+        }
+
+
+        header {
+            color: grey;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        h1,
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+
+        section {
+            width: 300px;
+            height: 400px;
+            font-size: 10px;
+
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ninebrary</h1>
+        <script>
+            var US_name = "사용자 이름"; // 사용자 이름을 받아옴
+            var HI_USER = document.createElement("h2");
+            greeting.innerHTML = US_name + "님이 로그인 하였습니다.";
+            document.body.appendChild(HI_USER);
+        </script>
+        <nav id="topMenu">
+            <ul>
+                <li><a class="topMenuclass" href="#">로그인</a></li>
+                <li><a class="topMenuclass" href="#">회원가입</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav id="midMenu">
+            <ul>
+                <li><a class="midMenuclass" href="#">내 서재</a></li>
+                <li><a class="midMenuclass" href="#">도서검색</a></li>
+                <li><a class="midMenuclass" href="#">마이페이지</a></li>
+                <li><a class="midMenuclass" href="#">대출/반납</a></li>
+            </ul>
+        </nav><br>
+
+        <div class="search">
+            <input type="text" placeholder="도서명 및 저자로 입력" size="60">
+            <button>검색</button>
+        </div><br>
+
+        <section>
+            <h1> 대여횟수(몽고db로 수집 한 내용)</h1>
+        </section>
+        <section>
+            <h1> 검색횟수(몽고db로 수집 한 내용)</h1>
+        </section>
+    </main>
+    <footer>
+        <p>나인브러리 정보(footer입니다)</p>
+    </footer>
+</body>
+
+</html>

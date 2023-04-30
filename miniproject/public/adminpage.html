@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>ADMINPAGE</title>
+</head>
+
+
+<body>
+    <h3>ADMINPAGE</h3>
+    <hr />
+    <form action="/insert" target="targetURL" name="userForm" method="post">
+        <p>Userid : <input type="text" size="15" name="US_ID" /></p>
+        <p>Password : <input type="password" size="15" name="US_PW" /></p>
+        <input type="button" value="회원 조회" onclick='document.targetURL.location.href="/select"' />&nbsp;&nbsp;
+        <input type="button" value="회원검색"
+            onclick='document.targetURL.location.href="/selectQuery?US_ID="+document.userForm.US_ID.value' />
+        &nbsp;&nbsp;
+        <button type="submit" formaction="/update">회원비밀번호변경</button>&nbsp;&nbsp;
+        <button type="submit" formaction="/delete">회원삭제</button>
+    </form>
+    <hr />
+    <iframe name="targetURL" width="70%" height="500" style="border: none" src="/hello"></iframe>
+</body>
+
+</html>
