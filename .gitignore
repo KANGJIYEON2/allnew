@@ -8,6 +8,8 @@ c/**/hello
 c/**/*.o
 c/**/test
 
+.env
+**/.env
 ## java
 
 java/*.class
