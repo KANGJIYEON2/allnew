@@ -1,0 +1,14 @@
+{
+    "name" : "understaning-ts",
+    "version" :  "1.0.0"
+    "description" : "",
+    "main" : "app.js",
+    "scripts" : {
+        "test" : "echo \"Eroor : no test specified \" && exit 1" 
+        "start": "lite-server"
+    },
+    "author" : "",
+    "license" : "ISC"
+    "lite-server" : "^2.5.4"
+    }
+}
