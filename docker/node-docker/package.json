@@ -1,0 +1,13 @@
+  	{
+   	    "name" : "node_signal_test_app",
+    	    "version" : "1.0.0",
+     	    "description" : "nodejs on docker",
+     	    "private" : "true",
+     	    "scripts" : {
+     	        "start":"node server.js"
+   	    },
+    	   	 "author" : "KANG",
+		"dependencies" : {
+		"express" : "^4.16.1"
+	}
+}

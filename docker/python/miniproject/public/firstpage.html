@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>open page</title>
+    <style>
+        @font-face {
+            font-family: 'new_font';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'new_font', Arial, sans-serif;
+            background-image: url('https://cdn.pixabay.com/photo/2022/01/01/15/40/train-6907884_1280.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: grey;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+
+        button#go-main {
+            font-family: 'new_font', Arial, sans-serif;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 2em;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: none;
+            margin-top: 20px;
+        }
+
+        button#go-main:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>안녕하세요. 5조 오디가조입니다!</h1>
+        <p> 저희 조는 2018년, 2020년, 2022년의 인천공항을 통해 여행하는 내국인들의 선호 여행지를 상위 10개국으로 선정하였습니다. 처음 계획은 연도별 상위 10개 도시를 추출하여 각각의
+            키워드를 분석하는 것이었으나, 여행지 선택 기준이 국가별로 상세하게 다르다는 점을 인지하였으며 특히 일본이 3년 동안 꾸준히 선호 여행지 목록에 포함되었음을 발견하였고, 이에 따라 저희는 일본에
+            대한 여행 선호도의 원인을 탐색하기로 결정하였습니다.</p>
+        <button id="go-main">메인페이지로</button>
+    </div>
+    <script>
+        document.getElementById("go-main").onclick = function () {
+            location.href = "main.html";
+        };
+    </script>
+</body>
+
+</html>
